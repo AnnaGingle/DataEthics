@@ -1,0 +1,493 @@
+/*NAV STUFF*************************************/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    min-height: 8vh;
+    font-family: 'Calistoga', Arial, Helvetica, sans-serif;
+}
+
+.intro-text {
+    display: none;
+}
+
+.intro-text h1,
+.intro-text h3 {
+    color: rgb(29, 29, 36);
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+/**BURGER BUTTON**/
+.burger {
+    margin-left: 900px;
+    cursor: pointer;
+}
+
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 50px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: 3px;
+    /* Remove outline */
+    background-color: rgba(0, 0, 0, 0.068);
+    /* Set a background color */
+    color: rgba(0, 0, 0, 0.171);
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 19px;
+    /* Rounded corners */
+    font-size: 50px;
+    /* Increase font size */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#myBtn:hover {
+    background-color: rgba(0, 0, 0, 0.555);
+    /* Add a dark-grey background on hover */
+}
+
+
+.burger div {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    margin: 5px;
+    transition: all 0.3s ease;
+
+}
+
+.nav-links {
+    position: absolute;
+    right: 0px;
+
+    height: 92vh;
+    top: 8vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    /**MOVE CONTAINER OFF THE SCREEN**/
+    transition: transform 0.5s ease-in;
+}
+
+.navlogo {
+    display: block;
+    width: 25%;
+    height: 25%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+
+/******MEDIA Q*******/
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .desktop-intro-name {
+        display: none;
+    }
+
+
+
+
+
+    /***MOBILE INTRO***/
+    .intro h1 {
+        font-size: 27px;
+        margin-top: 0px;
+    }
+
+    .intro h2 {
+        margin-top: 0px;
+    }
+
+}
+
+/***NAV ANIMATION**/
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/**BURGER ANIMATION*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+
+/**NAV STYLES**/
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    text-decoration: none;
+}
+
+.nav-links li {
+    list-style: none;
+
+
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.nav-links a:hover {
+    color: #213bd2;
+}
+
+/**BORDER**/
+#top,
+#bottom,
+#left,
+#right {
+    position: fixed;
+    z-index: 100;
+    background: rgba(29, 29, 36, 0.205);
+}
+
+#left,
+#right {
+    top: 0;
+    bottom: 0;
+    width: 20px;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+#top,
+#bottom {
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+
+#top {
+    top: 0;
+}
+
+#bottom {
+    bottom: 0;
+}
+
+@media
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    #top,
+    #bottom,
+    #left,
+    #right {
+        display: none;
+    }
+
+
+}
+
+
+
+/***BANNER*/
+.banner img {
+    width: 99.99%;
+    height: auto;
+    display: block;
+    align-content: center;
+    margin-right: .01px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.banner .banner-btn {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.banner .banner-btn:hover {
+    background-color: black;
+}
+
+#more {
+    display: none;
+}
+
+.logo {
+    font-family: 'Calistoga', Arial, Helvetica, sans-serif;
+}
+
+
+
+.intro {
+    min-height: 80vh;
+
+    display: block;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url("images/background.png");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.intro h1 {
+    font-size: 27px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'Calistoga', Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.intro h2 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+.material-icons.md-48 {
+    font-size: 48px;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#scrollsignal {
+    width: 30px;
+    height: auto;
+}
+
+.scrolling {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    display: block;
+    margin-top: 100px;
+}
+
+
+.bluebox {
+    background-color: #005D66;
+    width: 95%;
+
+    min-height: 90vh;
+    margin: auto;
+    display: block;
+
+}
+
+.why h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Calistoga', cursive;
+    color: rgb(0, 0, 0);
+    padding: 30px;
+}
+
+#blog {
+    margin-top: 0px;
+    background-attachment: url(blueborder.png);
+    background-repeat: no-repeat;
+    width: 95%;
+    height: auto;
+    min-height: 90vh;
+    margin: auto;
+    display: block;
+}
+
+#blog h1 {
+    text-align: center;
+}
+
+.blog-box,
+#blog h1 {
+    padding: 30px;
+
+}
+
+
+
+
+.ethics-chart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+
+}
+
+.quote {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    display: block;
+    text-align: center;
+
+}
+
+.quote h1 {
+    font-size: 34px;
+    text-shadow: rgba(64, 224, 208, 0.219);
+}
+
+
+.quote h1,
+.quote h2,
+.quote h3 {
+    line-height: 30px;
+    font-style: italic;
+    font-family: 'Calistoga', cursive;
+}
+
+/*RECORDS*/
+.blog-box2 {
+    display: block;
+    width: 50%;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.exmaple-type2 {
+    font-size: 12px;
+    color: red;
+}
+
+.blog-box2 p,
+.blog-box2 a {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.blog-box2 a {
+    justify-content: center;
+    text-align: center;
+    display: block;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.blog-summary2 {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 45px;
+}
+
+.blog-box2 a {
+    color: black;
+}
+
+.blog-box2 a:hover {
+    color: red;
+    transition: 5s;
+    cursor: pointer;
+}
+
+#mass3 {
+    padding: 10px;
+
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+
+
+/*FOOTER*/
+footer {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: heavy;
+    padding: 20px;
+
+}
