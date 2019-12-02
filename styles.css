@@ -88,6 +88,7 @@ nav h1 {
     justify-content: center;
     align-items: center;
     width: 50%;
+    text-transform: uppercase;
     transform: translateX(100%);
     /**MOVE CONTAINER OFF THE SCREEN**/
     transition: transform 0.5s ease-in;
@@ -264,6 +265,7 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
 
 
+
 .banner .banner-btn {
     position: absolute;
     top: 95%;
@@ -295,7 +297,6 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
 .intro {
     min-height: 80vh;
-
     display: block;
 }
 
@@ -386,19 +387,26 @@ body {
 #blog h1 {
     padding: 30px;
 
+
+}
+
+#blog-list {
+    margin-top: 20px;
 }
 
 
 
 
-.ethics-chart {
+
+
+#ethics {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     height: auto;
-
 }
+
 
 .quote {
     padding: 20px;
@@ -441,11 +449,12 @@ body {
     color: red;
 }
 
-.blog-box2 p,
+
 .blog-box2 a {
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
+    padding: 10px;
 }
 
 .blog-box2 a {
@@ -485,7 +494,17 @@ body {
     width: 70%;
 }
 
+#yelling {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
 
+.mobile-banner {
+    display: none;
+}
 
 /*FOOTER*/
 footer {
@@ -494,4 +513,110 @@ footer {
     font-weight: heavy;
     padding: 20px;
 
+}
+
+ol h1 {
+    text-decoration: underline;
+}
+
+#mobile-home-banner {
+    display: none;
+}
+
+/*iPhone X in portrait*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : portrait) {
+
+    /* STYLES GO HERE */
+    .intro {
+        min-height: 50px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    #home-banner {
+        display: none;
+    }
+
+    .mobile-banner {
+        display: block;
+    }
+
+}
+
+
+
+/*iPhone 6, 7, & 8 in portrait*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) {
+    .intro {
+        min-height: 50px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .mobile-banner {
+        display: block;
+    }
+
+    #mobile-home-banner {
+        display: block;
+    }
+}
+
+/*iPhone 6, 7, & 8 Plus in portrait*/
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) {
+    .intro {
+        min-height: 50px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .mobile-banner {
+        display: block;
+    }
+
+    #mobile-home-banner {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .intro {
+        min-height: 10px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    #home-banner {
+        display: none;
+    }
+
+    .mobile-banner {
+        display: block;
+    }
+
+    #mobile-home-banner {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #ethics {
+        width: 100%;
+    }
+
+    .quote {
+        padding: 2px;
+    }
+
+    .why h1 {
+        font-size: 30px;
+    }
 }
